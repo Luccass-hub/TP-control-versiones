@@ -23,6 +23,7 @@ hacer, por separado, cada uno de los modelos.
 Decidimos utilizar estas variables porque supusimos que, a mayor cantidad de tiros (totales y al arco), mas probable es 
 que hagan goles. El mismo razonamiento utilizamos para seleccionar minutos jugados (a mayor tiempo jugado, mayor posibilidad 
 de meter un gol).
+De igual manera, al analizar los supuestos de los modelos, vemos que el supuesto de homocedasticidad no se cumple para ninguno.
 '''
 
 y = df['Gls'] # Definimos la variable respuesta
@@ -95,7 +96,7 @@ plt.show()
 '''
 Comparando los R-cuadrados de cada modelo, vemos que los que tienen como variable predictora tiros al arco (0.726) 
 y tiros totales (0.814) se ajustan, siendo este último la mejor de las tres variables. Mientras que minutos jugados no,
-con un R-ajustado de 0.162. 
+con un R-cuadrado de 0.162. 
 '''
 
 
@@ -128,7 +129,6 @@ plt.scatter(result1.fittedvalues, result1.resid)
 plt.xlabel('Valores predichos')
 plt.ylabel('Residuos')
 plt.show()
-
 
 # Variable predictora: tiros al arco
 x = np.array(df['SoT'])
@@ -174,6 +174,8 @@ plt.ylabel('Residuos')
 plt.show()
 
 '''
+Al analizar los supuestos de estos modelos, notamos que el supuesto de homedasticidad sigue sin cumplirse.
+
 Comparando los R-cuadrados de cada modelo, vemos que en comparacion a los planteados utilizando todos los datos,
 bajo el ajuste de todos. Tiros al arco paso de 0.726 a 0.658. Tiros totales paso de 0.814 a 0.761, y Minutos Jugados
 bajo de 0.162 a 0.118. Se mantiene que los modelos de Tiros al arco y Tiros totales son los que mejor se ajustan, pero
