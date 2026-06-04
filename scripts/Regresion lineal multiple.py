@@ -151,7 +151,7 @@ plt.show()
 
 
 
+#Verificacion de supuestos
 
-
-
+sm.qqplot(modelo_7.resid,line=)
 
