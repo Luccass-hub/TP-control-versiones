@@ -40,6 +40,14 @@ sns.scatterplot(data=df, x='Sh', y=y)
 plt.title('Tiros totales')
 plt.show()
 
+# Verificamos los supuestos (normalidad de errores y homocedasticidad)
+sm.qqplot(result1.resid, line='r')
+plt.figure()
+plt.scatter(result1.fittedvalues, result1.resid)
+plt.xlabel('Valores predichos')
+plt.ylabel('Residuos')
+plt.show()
+
 
 # Variable predictora: tiros al arco
 x = np.array(df['SoT'])
@@ -54,6 +62,14 @@ sns.scatterplot(data=df, x='SoT', y=y)
 plt.title('Tiros al arco')
 plt.show()
 
+# Verificamos los supuestos (normalidad de errores y homocedasticidad)
+sm.qqplot(result2.resid, line='r')
+plt.figure()
+plt.scatter(result2.fittedvalues, result2.resid)
+plt.xlabel('Valores predichos')
+plt.ylabel('Residuos')
+plt.show()
+
 
 # Variable predictora: minutos jugados
 x = np.array(df['Min'])
@@ -66,6 +82,14 @@ print(result3.summary())
 plt.figure()
 sns.scatterplot(data=df, x='Min', y=y)
 plt.title('Minutos jugados')
+plt.show()
+
+# Verificamos los supuestos (normalidad de errores y homocedasticidad)
+sm.qqplot(result3.resid, line='r')
+plt.figure()
+plt.scatter(result3.fittedvalues, result3.resid)
+plt.xlabel('Valores predichos')
+plt.ylabel('Residuos')
 plt.show()
 
 '''
@@ -97,6 +121,14 @@ sns.scatterplot(data=df, x='Sh', y=y)
 plt.title('Tiros totales')
 plt.show()
 
+# Verificamos los supuestos (normalidad de errores y homocedasticidad)
+sm.qqplot(result1.resid, line='r')
+plt.figure()
+plt.scatter(result1.fittedvalues, result1.resid)
+plt.xlabel('Valores predichos')
+plt.ylabel('Residuos')
+plt.show()
+
 
 # Variable predictora: tiros al arco
 x = np.array(df['SoT'])
@@ -109,6 +141,14 @@ print(result2.summary())
 plt.figure()
 sns.scatterplot(data=df, x='SoT', y=y)
 plt.title('Tiros al arco')
+plt.show()
+
+# Verificamos los supuestos (normalidad de errores y homocedasticidad)
+sm.qqplot(result2.resid, line='r')
+plt.figure()
+plt.scatter(result2.fittedvalues, result2.resid)
+plt.xlabel('Valores predichos')
+plt.ylabel('Residuos')
 plt.show()
 
 
@@ -125,9 +165,17 @@ sns.scatterplot(data=df, x='Min', y=y)
 plt.title('Minutos jugados')
 plt.show()
 
+# Verificamos los supuestos (normalidad de errores y homocedasticidad)
+sm.qqplot(result3.resid, line='r')
+plt.figure()
+plt.scatter(result3.fittedvalues, result3.resid)
+plt.xlabel('Valores predichos')
+plt.ylabel('Residuos')
+plt.show()
+
 '''
 Comparando los R-cuadrados de cada modelo, vemos que en comparacion a los planteados utilizando todos los datos,
-bajo el ajuste de tdoos. Tiros al arco paso de 0.726 a 0.658. Tiros totales paso de 0.814 a 0.761, y MInutos Jugados
+bajo el ajuste de todos. Tiros al arco paso de 0.726 a 0.658. Tiros totales paso de 0.814 a 0.761, y Minutos Jugados
 bajo de 0.162 a 0.118. Se mantiene que los modelos de Tiros al arco y Tiros totales son los que mejor se ajustan, pero
 en menor medida.
 '''
