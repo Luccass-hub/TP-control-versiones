@@ -38,6 +38,8 @@ COLUMNAS_NUMERICAS = [
     "CrdR",
 ]
 
+ruta_datos = RUTA_PROYECTO / "data" / "jugadores_2024_2025.csv"
+cargador = CargaDatos(ruta_datos)
 
 
 ruta_datos = RUTA_PROYECTO / "data" / "jugadores_2024_2025.csv"
