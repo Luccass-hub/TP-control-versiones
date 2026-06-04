@@ -59,4 +59,10 @@ print()
 cargador.mostrar_resumen_numerico(columnas=COLUMNAS_NUMERICAS)
 
 #Debemos entrenar un modelo con Regresión Lineal Multiple, por lo tanto vamos a buscar las 
-#Variables que resulten mas llamativas para
+#Variables que resulten mas llamativas para hacer la regresion
+#La variable respuesta es Gls
+
+datos=cargador.cargar_datos()
+print(datos.head(5))
+
+
