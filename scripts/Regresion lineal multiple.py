@@ -153,5 +153,10 @@ plt.show()
 
 #Verificacion de supuestos
 
-sm.qqplot(modelo_7.resid,line=)
+sm.qqplot(modelo_7.resid,line="r")
+plt.figure()
+plt.scatter(modelo_7.fittedvalues,modelo_7.resid)
+plt.xlabel("Valores predichos")
+plt.ylabel("Residuos")
+plt.show()
 
